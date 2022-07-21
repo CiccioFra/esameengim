@@ -60,3 +60,14 @@ INSERT INTO tariffa_coriere (`nome_corriere`, `nome_tariffa`, `peso_massimo`, `c
 
 SELECT * FROM tariffa_coriere;
 
+-- Tabella Voce
+DROP TABLE IF EXISTS voce;
+CREATE TABLE IF NOT EXISTS voce (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_ordine INT NOT NULL,
+    id_articolo INT NOT NULL,
+    quantita_articolo INT NOT NULL)
+    ENGINE = InnoDB;
+
+SELECT * FROM voce;
+
