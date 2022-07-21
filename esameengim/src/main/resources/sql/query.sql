@@ -66,7 +66,10 @@ CREATE TABLE IF NOT EXISTS voce (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_ordine INT NOT NULL,
     id_articolo INT NOT NULL,
-    quantita_articolo INT NOT NULL)
+    quantita_articolo INT NOT NULL,
+    FOREIGN KEY (id_ordine) REFERENCES ordine(id),
+    FOREIGN KEY (id_articolo) REFERENCES articolo(id)
+    )
     ENGINE = InnoDB;
 
 INSERT INTO voce (`id_ordine`, `id_articolo`, `quantita_articolo`)
