@@ -1,5 +1,8 @@
 package francescoribatti.esameengim.model;
 
+/**
+ * Classe per creare l'stanza/oggetto Articolo
+ */
 public class Articolo {
     private int id;
     private String codice;

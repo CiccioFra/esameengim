@@ -1,5 +1,8 @@
 package francescoribatti.esameengim.model;
 
+/**
+ * Classe per creare l'stanza/oggetto Ordine
+ */
 public class Ordine {
     private int id;
     private int numero;
