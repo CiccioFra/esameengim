@@ -15,7 +15,7 @@ import static francescoribatti.esameengim.credenzialiDB.DBConfig.*;
  */
 public class TariffaCorriereRepository {
     /**
-     * Recupera dal DB tutte le Tariffe dei Corrieri nella Tabella "tariffa_coriere"
+     * Recupera dal DB tutte le Tariffe dei Corrieri nella Tabella "tariffa_corriere"
      * @return Lista di tutte le Tariffe dei Corrieri
      */
     public static List<TariffaCorriere> getTariffe(){
@@ -23,7 +23,7 @@ public class TariffaCorriereRepository {
 
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PW);
-            PreparedStatement stmt = conn.prepareStatement("select id, nome_corriere, nome_tariffa, peso_massimo, costo FROM tariffa_coriere");
+            PreparedStatement stmt = conn.prepareStatement("select id, nome_corriere, nome_tariffa, peso_massimo, costo FROM tariffa_corriere");
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 TariffaCorriere tariffa = new TariffaCorriere(
@@ -46,7 +46,7 @@ public class TariffaCorriereRepository {
 
     /**
      * Recupera dal DB le Tariffe dei Corrieri con condizione di peso Massimo
-     * nella Tabella "tariffa_coriere"
+     * nella Tabella "tariffa_corriere"
      * @return Lista delle Tariffe dei Corrieri con peso amissibile
      */
     public static List<TariffaCorriere> getTariffePerPeso(double peso){
@@ -55,7 +55,7 @@ public class TariffaCorriereRepository {
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PW);
             PreparedStatement stmt = conn.prepareStatement("select id, nome_corriere, nome_tariffa, peso_massimo, costo " +
-                    "FROM tariffa_coriere WHERE peso_massimo > ?");
+                    "FROM tariffa_corriere WHERE peso_massimo > ?");
             stmt.setDouble(1, peso);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {

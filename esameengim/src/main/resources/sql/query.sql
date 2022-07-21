@@ -37,7 +37,7 @@ INSERT INTO ordine (`numero`, `data`)
 
 SELECT * FROM articolo;
 
--- Tabella tariffa_coriere
+-- Tabella tariffa_corriere
 DROP TABLE IF EXISTS tariffa_corriere;
 CREATE TABLE IF NOT EXISTS tariffa_corriere (
     id INT AUTO_INCREMENT PRIMARY KEY,
