@@ -69,5 +69,21 @@ CREATE TABLE IF NOT EXISTS voce (
     quantita_articolo INT NOT NULL)
     ENGINE = InnoDB;
 
+INSERT INTO voce (`id_ordine`, `id_articolo`, `quantita_articolo`)
+    VALUE (1, 3, 2),
+          (2, 2, 1),
+          (2, 3, 1),
+          (3, 3, 1),
+          (3, 4, 1),
+          (4, 1, 2),
+          (4, 4, 1),
+          (5, 4, 2),
+          (5, 1, 1),
+          (6, 1, 3),
+          (7, 2, 7),
+          (8, 5, 1),
+          (8, 3, 1),
+          (9, 5, 6);
+
 SELECT * FROM voce;
 
