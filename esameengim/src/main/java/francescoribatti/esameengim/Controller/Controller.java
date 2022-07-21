@@ -7,12 +7,14 @@ import francescoribatti.esameengim.model.repository.ArticoloRepository;
 import francescoribatti.esameengim.model.repository.OrdineRepository;
 import francescoribatti.esameengim.model.repository.TariffaCorriereRepository;
 import francescoribatti.esameengim.payload.TariffaOrdiniPayload;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 public class Controller {
 
     @GetMapping("/articoli")
