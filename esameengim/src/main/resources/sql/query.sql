@@ -38,8 +38,8 @@ INSERT INTO ordine (`numero`, `data`)
 SELECT * FROM articolo;
 
 -- Tabella tariffa_coriere
-DROP TABLE IF EXISTS tariffa_coriere;
-CREATE TABLE IF NOT EXISTS tariffa_coriere (
+DROP TABLE IF EXISTS tariffa_corriere;
+CREATE TABLE IF NOT EXISTS tariffa_corriere (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome_corriere VARCHAR(10),
     nome_tariffa VARCHAR(50),
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS tariffa_coriere (
     costo DOUBLE NOT NULL)
     ENGINE = InnoDB;
 
-INSERT INTO tariffa_coriere (`nome_corriere`, `nome_tariffa`, `peso_massimo`, `costo`)
+INSERT INTO tariffa_corriere (`nome_corriere`, `nome_tariffa`, `peso_massimo`, `costo`)
     VALUE ('SDA', 'Economy',      1,      5.90),
           ('SDA', 'Veloce',       5,      7.90),
           ('SDA', 'Bigbox',       30,     12.90),
@@ -58,7 +58,7 @@ INSERT INTO tariffa_coriere (`nome_corriere`, `nome_tariffa`, `peso_massimo`, `c
           ('UPS', 'Standard',     3,      6.90),
           ('UPS', 'Jumbo',        25,     11.50);
 
-SELECT * FROM tariffa_coriere;
+SELECT * FROM tariffa_corriere;
 
 -- Tabella Voce
 DROP TABLE IF EXISTS voce;
