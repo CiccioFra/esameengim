@@ -1,3 +1,10 @@
+// button
+function cercaID() {
+        document.getElementById("nrOrdine").value =   document.getElementById("id").value;
+}
+
+
+// ---------
 const div = document.getElementById('container');
 div.id = "dic";
 div.className += "dic contenitore";

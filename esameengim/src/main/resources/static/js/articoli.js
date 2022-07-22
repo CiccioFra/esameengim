@@ -26,6 +26,8 @@ table.className += "table";
 
 const url = 'http://localhost:8081/articoli';
 
+// Postman vede il Json contenente corettametne i dati,
+// il browser riporta che il response viene "consumato" e da errore al secondo .then
 fetch(url)
     .then((response) => {
         console.log(response);
